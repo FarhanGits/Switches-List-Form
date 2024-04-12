@@ -18,13 +18,15 @@ function App() {
 
   return (
     <>
-      <div className="flex justify-center">
-        <h1 className="text-3xl font-bold underline">
-          Add or Delete Switch List!
-        </h1>
+      <div className="flex justify-center mt-10">
+        <h1 className="text-3xl font-bold">Add or Delete Switch List!</h1>
       </div>
 
-      <SwitchForm />
+      <SwitchForm
+        onSubmit={(switchh) =>
+          setSwitches([...switches, { ...switchh, id: switches.length + 1 }])
+        }
+      />
 
       <SwitchFilter onSelect={(category) => setSelectedCategory(category)} />
 
