@@ -1,5 +1,3 @@
-import React from "react";
-
 interface Switch {
   id: number;
   name: string;
